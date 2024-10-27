@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="newfile.css">
+</head>
+<body>
+    <div class="h">
+        <header>
+            <input type="text" name="text" class="input" placeholder="Search the words.....">
+            <a href="index.html">Home page</a>
+        </header>
+    </div>
+    <div class="but">
+        <button id="2d"><a href="#">PHP Operators</a></button>
+        <button id="array"><a href="#">Data Types</a></button>
+        <button id="bp"><a href="#">Comments and Print Statement</a></button>
+        <button id="exception"><a href="#">Looping Statement</a></button>
+        <button id="converting"><a href="#">Branching Statement</a></button>
+        <button id="func"><a href="#">Functions</a></button><br>
+        <a id="inheritances" class="btn" href="#">Recursion</a>
+        <a id="inp" class="btn" href="#">String Functions</a>
+        <a id="String" class="btn" href="#">String Operators</a>
+        <a id="app" class="btn" href="#">Single Dimensional Array</a>
+        <a id="Delegation" class="btn" href="#">Associative Array</a><br><br>
+        <a id="pack" class="bt" href="#">Multidimensional Array</a>
+        <a id="inter" class="bt" href="#">Super Global Variables</a>
+        <a id="data" class="bt" href="#">PHP Databases</a>
+        <a id="multi" class="bt" href="#">PHP Cookie</a>
+        <a id="object" class="bt" href="#">PHP Session</a>
+        <a id="awts" class="bt" href="#">File Handling</a>
+    </div>
+    <div id="2d-list" class="bbtn" style="display: none;">
+        <div class="bbt">
+        <h1>Operators</h1>
+        <p>
+            An operator takes some values (the operands) and does something (for instance, addsthem together). Operators are written as punctuation symbols—for instance, the + and – familiar to us from math. Some operators modify their operands, while most do not.
+        </p>
+        <br>
+        <br>
+        <h3>Arithmetic Operators</h3>
+        <p>
+            The arithmetic operators are operators you’ll recognize from everyday use. Most of the
+            arithmetic operators are binary; however, the arithmetic negation and arithmetic as-
+            sertion operators are unary. These operators require numeric values, and nonnumeric
+            values are converted into numeric values by the rules described. The arithmetic operators are:
+        <pre>
+        Addition (+)
+        The result of the addition operator is the sum of the two operands.
+
+        Subtraction (−)
+        The result of the subtraction operator is the difference between the two operands
+        —i.e., the value of the second operand subtracted from the first.
+
+        Multiplication (*)
+        The result of the multiplication operator is the product of the two operands. For
+        example, 3 * 4 is 12.
+
+        Division (/)
+        The result of the division operator is the quotient of the two operands. Dividing
+        two integers can give an integer (e.g., 4 / 2) or a floating-point result (e.g., 1 / 2).
+
+        Modulus (%)
+        The modulus operator converts both operands to integers and returns the remain-
+        der of the division of the first operand by the second operand. For example, 10 %
+        6 is 4.</pre>
+        </p>
+        <br>
+        <h3>String Concatenation Operator</h3>
+        <p>
+            Manipulating strings is such a core part of PHP applications that PHP has a separate
+string concatenation operator (.). The concatenation operator appends the righthand
+operand to the lefthand operand and returns the resulting string. Operands are first
+converted to strings, if necessary. For example:
+<div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+    <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+        <a href="operator1.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+    </div>
+    <pre>
+      &lt;?php
+      $n = 5;
+      $s = 'There were ' . $n . ' ducks.';
+      echo $s;
+      ?>
+    </pre>
+    </div>
+</p>
+    <h3>Comparison Operators</h3>
+    <p>As their name suggests, comparison operators compare operands. The result is always
+        either true, if the comparison is truthful, or false otherwise.
+        Operands to the comparison operators can be both numeric, both string, or one nu-
+        meric and one string. The operators check for truthfulness in slightly different ways
+        based on the types and values of the operands, either using strictly numeric compari-
+        sons or using lexicographic (textual) comparisons.One important thing to note is that two numeric strings are compared as if they were
+        numbers. If you have two strings that consist entirely of numeric characters and you
+        need to compare them lexicographically, use the strcmp() function.
+        The comparison operators are:
+    <pre>
+        Equality (==)
+        If both operands are equal, this operator returns true; otherwise, it returns false.
+
+        Identity (===)
+        If both operands are equal and are of the same type, this operator returns true;
+        otherwise, it returns false. Note that this operator does not do implicit type casting.
+        This operator is useful when you don’t know if the values you’re comparing are of
+        the same type. Simple comparison may involve value conversion. For instance, the
+        strings "0.0" and "0" are not equal. The == operator says they are, but === says they
+        are not.
+
+        Inequality (!= or <>)
+        If both operands are not equal, this operator returns true; otherwise, it returns
+        false.
+
+        Not identical (!==)
+        If both operands are not equal, or they are not of the same type, this operator
+        returns true; otherwise, it returns false.
+
+        Greater than (>)
+        If the lefthand operand is greater than the righthand operand, this operator returns
+        true; otherwise, it returns false.
+
+        Greater than or equal to (>=)
+        If the lefthand operand is greater than or equal to the righthand operand, this
+        operator returns true; otherwise, it returns false.
+
+        Less than (<)
+        If the lefthand operand is less than the righthand operand, this operator returns
+        true; otherwise, it returns false.
+
+        Less than or equal to (<=)
+        If the lefthand operand is less than or equal to the righthand operand, this operator
+        returns true; otherwise, it returns false.
+    </pre></p>
+    <br>
+    <h3>Logical Operators</h3>
+    <p>Logical operators provide ways for you to build complex logical expressions. Logical
+        operators treat their operands as Boolean values and return a Boolean value. There are
+        both punctuation and English versions of the operators (|| and or are the same oper-
+        ator). The logical operators are:
+    <pre>
+        Logical AND (&&, and)
+        The result of the logical AND operation is true if and only if both operands are
+        true; otherwise, it is false. If the value of the first operand is false, the logical
+        AND operator knows that the resulting value must also be false, so the righthand
+        operand is never evaluated. This process is called short-circuiting, and a common
+        PHP idiom uses it to ensure that a piece of code is evaluated only if something is
+        true. For example, you might connect to a database only if some flag is not false:
+        $result = $flag and mysql_connect();
+        The && and and operators differ only in their precedence.
+
+        Logical OR (||, or)
+        The result of the logical OR operation is true if either operand is true; otherwise,
+        the result is false. Like the logical AND operator, the logical OR operator is short-
+        circuited. If the lefthand operator is true, the result of the operator must be true,
+        so the righthand operator is never evaluated. A common PHP idiom uses this to
+        trigger an error condition if something goes wrong. For example:
+        $result = fopen($filename) or exit();
+        The || and or operators differ only in their precedence.
+
+        Logical XOR (xor)
+        The result of the logical XOR operation is true if either operand, but not both, is
+        true; otherwise, it is false.
+
+        Logical negation (!)
+        The logical negation operator returns the Boolean value true if the operand eval-
+        uates to false, and false if the operand evaluates to true.
+    </pre></p>
+    <br>
+    <h3>Assignment Operators</h3>
+    <p>Assignment operators store or update values in variables. The auto-increment and auto-
+        decrement operators we saw earlier are highly specialized assignment operators—here
+        we see the more general forms. The basic assignment operator is =, but we’ll also see
+        combinations of assignment and binary operations, such as += and &=.The basic assignment operator (=) assigns a value to a variable. The lefthand operand
+        is always a variable. The righthand operand can be any expression—any simple literal,
+        variable, or complex expression. The righthand operand’s value is stored in the variable
+        named by the lefthand operand.
+        Because all operators are required to return a value, the assignment operator returns
+        the value assigned to the variable. For example, the expression $a = 5 not only assigns
+        5 to $a, but also behaves as the value 5 if used in a larger expression. Consider the
+        following expressions:
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+            <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                <a href="operator2.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+            </div>
+            <pre>
+                &lt;?php
+                $a = 5;
+                $b = 10;
+                $c = ($a = $b);
+                ?>  
+            </pre>
+            </div>
+        The expression $a = $b is evaluated first, because of the parentheses. Now, both $a and
+        $b have the same value, 10. Finally, $c is assigned the result of the expression $a = $b,
+        which is the value assigned to the lefthand operand (in this case, $a). When the full
+        expression is done evaluating, all three variables contain the same value: 10.
+    
+        <pre>
+            Plus-equals (+=)
+            Adds the righthand operand to the value of the lefthand operand, then assigns the
+            result to the lefthand operand. $a += 5 is the same as $a = $a + 5.
+            
+            Minus-equals (−=)
+            Subtracts the righthand operand from the value of the lefthand operand, then as-
+            signs the result to the lefthand operand.
+
+            Divide-equals (/=)
+            Divides the value of the lefthand operand by the righthand operand, then assigns
+            the result to the lefthand operand.
+
+            Multiply-equals (*=)
+            Multiplies the righthand operand with the value of the lefthand operand, then
+            assigns the result to the lefthand operand.
+
+            Modulus-equals (%=)
+            Performs the modulus operation on the value of the lefthand operand and the
+            righthand operand, then assigns the result to the lefthand operand.
+        </pre></p>
+        </div>
+    </div>
+    <div id="array1" class="bbtn" style="display: none;">
+        <div class="bbt">
+            <h1>Data Types</h1>
+            <p>PHP provides eight types of values, or data types. Four are scalar (single-value) types:
+                integers, floating-point numbers, strings, and Booleans. Two are compound (collec-
+                tion) types: arrays and objects. The remaining two are special types: resource and
+                NULL. Numbers, Booleans, resources, and NULL are discussed in full here, while
+                strings, arrays, and objects are big enough topics
+            </p>
+            <h3>Integers</h3>
+            <p>Integers are whole numbers, such as 1, 12, and 256. The range of acceptable values
+                varies according to the details of your platform but typically extends from
+                −2,147,483,648 to +2,147,483,647. Specifically, the range is equivalent to the range of
+                the long data type of your C compiler. Unfortunately, the C standard doesn’t specify
+                what range that long type should have, so on some systems you might see a different
+                integer range.
+                Integer literals can be written in decimal, octal, or hexadecimal. Decimal values are
+                represented by a sequence of digits, without leading zeros. The sequence may begin
+                with a plus (+) or minus (−) sign. If there is no sign, positive is assumed. Examples of
+                decimal integers include the following:
+                <pre>
+                1998
+                −641
+                +33
+                </pre>
+            </p>
+            <br>
+            <h3>Floating-Point Numbers</h3>
+            <p>Floating-point numbers (often referred to as real numbers) represent numeric values
+                with decimal digits. Like integers, their limits depend on your machine’s details. PHP
+                floating-point numbers are equivalent to the range of the double data type of your C
+                compiler. Usually, this allows numbers between 1.7E−308 and 1.7E+308 with 15 digits
+                of accuracy. If you need more accuracy or a wider range of integer values, you can use
+                the BC or GMP extensions.
+                PHP recognizes floating-point numbers written in two different formats. There’s the
+                one we all use every day:
+            <pre>
+                3.14
+                0.017
+                -7.1
+            </pre></p>
+            <br>
+            <h3>Strings</h3>
+            <p>Because strings are so common in web applications, PHP includes core-level support
+                for creating and manipulating strings. A string is a sequence of characters of arbitrary
+                length. String literals are delimited by either single or double quotes:
+            <pre>
+                'big dog'
+                "fat hog"
+            </pre></p>
+            <br>
+            <h3>Boolean</h3>
+            <p>A Boolean value represents a “truth value”—it says whether something is true or not.
+                Like most programming languages, PHP defines some values as true and others as false.
+                Truth and falseness determine the outcome of conditional code such as:  if ($alive) { ... }
+                In PHP, the following values all evaluate to false:
+            <pre>
+                • The keyword false
+                • The integer 0
+                • The floating-point value 0.0
+                • The empty string ("") and the string "0"
+                • An array with zero elements
+                • An object with no values or functions
+                • The NULL value
+            </pre></p>
+        </div>
+
+    </div>
+    <div id="bpp" class="bbtn" style="display: none;">
+        <div class="bbt">
+            <h1>Comments</h1>
+            <p>PHP comments can be used to describe any line of code so that other developer can understand the code easily. It can also be used to hide any code.
+
+                PHP supports single line and multi line comments. These comments are similar to C/C++ and Perl style (Unix shell style) comments.
+            </p>
+                <h3>Single Line</h3>
+    <pre>
+        There are two ways to use single line comments in PHP.
+
+        // (C++ style single line comment)
+        # (Unix Shell style single line comment)
+    </pre>
+               
+                    <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+    <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+        <a href="comment1.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+    </div>
+    <pre>
+    &lt;?php  
+    // this is C++ style single line comment  
+    # this is Unix Shell style single line comment  
+    echo "Welcome to PHP single line comments";  
+    ?>  
+    </pre>
+    </div>
+                   
+                <br>
+                <h3>Multi Line</h3>
+                <p>In PHP, we can comments multiple lines also. To do so, we need to enclose all lines within /* */. Let's see a simple example of PHP multiple line comment.</p>
+                   
+                <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                    <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                        <a href="comment2.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                    </div>
+<pre>
+    &lt;?php  
+    /* 
+    Anything placed 
+    within comment 
+    will not be displayed 
+    on the browser; 
+    */  
+    echo "Welcome to PHP multi line comment";  
+    ?>  
+</pre>
+                    </div>
+        
+            
+            
+            <h1>Echo And Print</h1>
+            <p>We frequently use the echo statement to display the output. There are two basic ways to get the output in PHP:
+
+                echo
+                print
+            
+            echo and print are language constructs, and they never behave like a function. Therefore, there is no requirement for parentheses. However, both the statements can be used with or without parentheses. We can use these statements to output variables or strings.</p>
+        <h3>echo</h3>
+        <pre>
+    echo is a statement, which is used to display the output.
+    echo can be used with or without parentheses.
+    echo does not return any value.
+    We can pass multiple strings separated by comma (,) in echo.
+    echo is faster than print statement.
+        </pre>
+        <br>
+        <h3>print</h3>
+        <pre>
+    print is also a statement, used as an alternative to echo at many times to display the output.
+    print can be used with or without parentheses.
+    print always returns an integer value, which is 1.
+    Using print, we cannot pass multiple arguments.
+    print is slower than echo statement.
+        </pre>
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+            <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                <a href="pri.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+            </div>
+        <pre>
+        &lt;?php  
+        $fname = "Mohd";  
+        $lname = "Jahid";  
+        echo "My name is: ".$fname,$lname;  
+        print "My name is: ".$fname.$lname;
+        ?>  
+        </pre>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="exceptionh" class="bbtn" style="display:none;">
+        <div class="bbt">
+            <h1>Looping Statement</h1>
+            <p>
+                Like other programming languages, PHP Loops are used to repeat a block of code multiple times based on a given condition. PHP provides several types of loops to handle different scenarios, including while loops, for loops, do…while loops, and foreach loops. In this article, we will explore the different types of loops in PHP, their syntax, and examples.
+            </p>
+            <h3>While</h3>
+            <p>
+                while loops are the simplest type of loop in PHP. They behave just like their C counterparts. The basic form of a while statement is:
+<pre>
+    while (expr)
+    statement
+</pre>
+                
+                The meaning of a while statement is simple. It tells PHP to execute the nested statement(s) repeatedly, as long as the while expression evaluates to true. The value of the expression is checked each time at the beginning of the loop, so even if this value changes during the execution of the nested statement(s), execution will not stop until the end of the iteration (each time PHP runs the statements in the loop is one iteration). If the while expression evaluates to false from the very beginning, the nested statement(s) won't even be run once.
+                
+                Like with the if statement, you can group multiple statements within the same while loop by surrounding a group of statements with curly braces, or by using the alternate syntax:
+                <pre>
+    while (expr):
+    statement
+    ...
+    endwhile;
+</pre>
+                The following examples are identical, and both print the numbers 1 through 10: 
+            </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="loop1.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+    <pre>
+    &lt;?php
+    
+
+    $i = 1;
+    while ($i< = 10) {
+    echo $i++;  
+    }
+    </pre>
+                </div>
+                <br>
+        <h3>Do-while</h3>
+        <p>
+            do-while loops are very similar to while loops, except the truth expression is checked at the end of each iteration instead of in the beginning. The main difference from regular while loops is that the first iteration of a do-while loop is guaranteed to run (the truth expression is only checked at the end of the iteration), whereas it may not necessarily run with a regular while loop (the truth expression is checked at the beginning of each iteration, if it evaluates to false right from the beginning, the loop execution would end immediately).
+
+            There is just one syntax for do-while loops: 
+        </p>
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+            <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                <a href="loop2.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+            </div>
+<pre>
+
+    &lt;?php
+    $i = 0;
+    do {
+        echo $i;
+    } while ($i > 0);
+    ?>
+    
+</pre>
+            </div>
+            <p>The above loop would run one time exactly, since after the first iteration, when truth expression is checked, it evaluates to false ($i is not bigger than 0) and the loop execution ends. </p>
+        <br>
+        <h3>For</h3>
+        <p>
+            for loops are the most complex loops in PHP. They behave like their C counterparts. The syntax of a for loop is:
+<pre>
+        for (expr1; expr2; expr3)
+        statement
+</pre>
+            The first expression (expr1) is evaluated (executed) once unconditionally at the beginning of the loop.
+            
+            In the beginning of each iteration, expr2 is evaluated. If it evaluates to true, the loop continues and the nested statement(s) are executed. If it evaluates to false, the execution of the loop ends.
+            
+            At the end of each iteration, expr3 is evaluated (executed).
+            
+            Each of the expressions can be empty or contain multiple expressions separated by commas. In expr2, all expressions separated by a comma are evaluated but the result is taken from the last part. expr2 being empty means the loop should be run indefinitely (PHP implicitly considers it as true, like C). This may not be as useless as you might think, since often you'd want to end the loop using a conditional break statement instead of using the for truth expression.
+            
+            Consider the following examples. All of them display the numbers 1 through 10: 
+        </p>
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+            <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                <a href="loop3.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+            </div>
+<pre>
+    &lt;?php
+    
+    for ($i = 1; $i <= 10; $i++) {
+        echo $i;
+    }
+</pre>
+            </div>
+            <br>
+            <h3>For-Each</h3>
+            <p>
+                The foreach construct provides an easy way to iterate over arrays. foreach works only on arrays and objects, and will issue an error when you try to use it on a variable with a different data type or an uninitialized variable. There are two syntaxes:
+<pre>
+        foreach (iterable_expression as $value)
+        statement
+        foreach (iterable_expression as $key => $value)
+        statement
+</pre>
+                The first form traverses the iterable given by iterable_expression. On each iteration, the value of the current element is assigned to $value.
+                
+                The second form will additionally assign the current element's key to the $key variable on each iteration.
+                
+                Note that foreach does not modify the internal array pointer, which is used by functions such as current() and key().
+                
+                It is possible to customize object iteration.
+                
+                In order to be able to directly modify array elements within the loop precede $value with &. In that case the value will be assigned by reference. 
+            </pre>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="loop4.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+
+    &lt;?php
+    $arr = array(1, 2, 3, 4);
+    foreach ($arr as $value) {
+    echo $value;
+    }
+    ?>
+
+</pre>
+                </div>
+        </div>
+    </div>
+    <div id="convert" class="bbtn" style="display: none;">
+        <div class="bbt">
+            <h1>Branching Statement</h1>
+            <p>
+                PHP allows us to perform actions based on some type of conditions that may be logical or comparative. Based on the result of these conditions i.e., either TRUE or FALSE, an action would be performed as asked by the user. It’s just like a two- way path. If you want something then go this way or else turn that way. To use this feature, PHP provides us with four conditional statements:
+
+<pre>
+    if statement
+    if…else statement
+    if…elseif…else statement
+</pre>
+            </p>
+            <h3>if statement</h3>
+            <p>
+                The if construct is one of the most important features of many languages, PHP included. It allows for conditional execution of code fragments. PHP features an if structure that is similar to that of C:
+<pre>
+    if (expr)
+    statement
+</pre>
+                As described in the section about expressions, expression is evaluated to its Boolean value. If expression evaluates to true, PHP will execute statement, and if it evaluates to false - it'll ignore it. More information about what values evaluate to false can be found in the 'Converting to boolean' section.
+                
+                The following example would display a is bigger than b if $a is bigger than $b: 
+            </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="if1.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+
+    &lt;?php
+    $a=10;
+    $b=5;
+    if ($a > $b)
+    echo "a is bigger than b";
+    ?>
+
+</pre>
+                </div>
+                <br>
+            <h3>if else statement</h3>
+            <p>Often you'd want to execute a statement if a certain condition is met, and a different statement if the condition is not met. This is what else is for. else extends an if statement to execute a statement in case the expression in the if statement evaluates to false. For example, the following code would display a is greater than b if $a is greater than $b, and a is NOT greater than b otherwise: </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="if2.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+
+    &lt;?php
+    $a=10;
+    $b=5;
+    if ($a > $b){
+    echo "a is bigger than b";
+    }
+    else{
+    echo "b is bigger than a";
+    }
+    ?>
+
+</pre>
+                </div>
+            <br>
+            <h3>else if statement</h3>
+            <p>elseif, as its name suggests, is a combination of if and else. Like else, it extends an if statement to execute a different statement in case the original if expression evaluates to false. However, unlike else, it will execute that alternative expression only if the elseif conditional expression evaluates to true. For example, the following code would display a is bigger than b, a equal to b or a is smaller than b: </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="if3.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+
+    &lt;?php
+    $a=10;
+    $b=5;
+    if ($a > $b) {
+        echo "a is bigger than b";
+    } elseif ($a == $b) {
+        echo "a is equal to b";
+    } else {
+        echo "a is smaller than b";
+    }
+    ?>
+    
+
+</pre>
+                </div>
+        </div>
+
+    </div>
+    <div id="funt" class="bbtn" style="display: none;">
+        <div class="bbt">
+            <h1>Functions</h1>
+            <p>
+                A function is a named block of code that performs a specific task, possibly acting upon
+a set of values given to it, or parameters, and possibly returning a single value. Functions
+save on compile time—no matter how many times you call them, functions are com-
+piled only once for the page. They also improve reliability by allowing you to fix any
+bugs in one place, rather than everywhere you perform a task, and they improve read-
+ability by isolating code that performs specific tasks.
+This chapter introduces the syntax of function calls and function definitions and dis-
+cusses how to manage variables in functions and pass values to functions (including
+pass-by-value and pass-by-reference). It also covers variable functions and anonymous
+functions
+            </p>
+            <h3>User Defined</h3>
+            <p>
+                Apart from the built-in functions, PHP allows us to create our own customised functions called the user-defined functions. 
+Using this we can create our own packages of code and use it wherever necessary by simply calling it.
+<pre>
+    While creating a user defined function we need to keep few things in mind: 
+
+    1.Any name ending with an open and closed parenthesis is a function.
+    2.A function name always begins with the keyword function.
+    3.To call a function we just need to write its name followed by the parenthesis
+    4.A function name cannot start with a number. It can start with an alphabet or underscore.
+    5.A function name is not case-sensitive.
+</pre>
+            </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="func1.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+    &lt;?php
+
+    function func1() 
+    {
+        echo "Hello world";
+    }
+    func();
+    ?>
+    
+</pre>
+                </div>
+            <h3>Built-in</h3>
+<pre>
+
+    1.Built-in functions, also called predefined or library functions, are included in PHP by default.
+    2.They perform common tasks like handling strings, arrays, files, math operations, and databases.
+    3.These functions save time and effort as they are already implemented and available for use.
+    4.PHP offers a vast range of built-in functions, providing developers with tools to complete 
+    tasks quickly and efficiently.
+
+</pre>
+<pre>
+    prev()   	Rewinds the internal array pointer
+    range() 	Creates an array containing a range of elements
+    reset() 	Sets the internal pointer of an array to its first element
+    rsort() 	Sorts an indexed array in descending order
+    shuffle() 	Shuffles an array
+    sizeof() 	Alias of count()
+    sort() 	Sorts an indexed array in ascending order
+    uasort() 	Sorts an array by values using a user-defined comparison function and maintains the index association
+    uksort() 	Sorts an array by keys using a user-defined comparison function
+    usort() 	Sorts an array by values using a user-defined comparison function
+    </pre>
+        </div>
+    </div>
+    <div id="inherit" class="bbtn" style="display: none;">
+       <div class="bbt">
+        <h1>Recursive Functions</h1>
+        <p>
+            PHP also supports recursive function call like C/C++. In such case, we call current function within function. It is also known as recursion.
+
+It is recommended to avoid recursive function call over 200 recursion level because it may smash the stack and may cause the termination of script.
+        </p>
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+            <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                <a href="rec1.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+            </div>
+<pre>
+    &lt;?php    
+    function display($number) {    
+    if($number<=5){    
+    echo "$number &lt;br>";    
+    display($number+1);    
+    }  
+    }    
+
+    display(1);    
+    ?>   
+</pre>
+            </div>
+       </div>
+    </div>
+    <div id="inp-list" class="bbtn" style="display: none;">
+        <div class="bbt">
+            <h1>String Functions</h1>
+            <p>
+                In the programming world, a string is considered a data type, which in general is a sequence of multiple characters that can contain whitespaces, numbers, characters, and special symbols. For example, “Hello World!”, “ID-34#90” etc. PHP also allows single quotes(‘ ‘) for defining a string. Every programming language provides some in-built functions for the manipulation of strings. Some of the basic string functions provided by PHP are as follows:
+            </p>
+            <pre>
+    strlen() Function
+    It returns the length of the string i.e. the count of all the characters in the string including whitespace characters.
+   
+    strrev() Function
+    It returns the reversed string of the given string.
+
+    trim()
+    Removes characters or whitespaces from both sides.
+
+    rtrim()
+    Removes characters or whitespaces from the right side.
+
+    ltrim()
+    Removes characters or whitespaces from the left side.
+
+    strtoupper()
+    It returns the string after converting all the letters to uppercase.
+
+    strtolower()
+    It returns the string after converting all the letters to lowercase.
+
+            </pre>
+
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="str1.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+    &lt;?php 
+ 
+    $str = " Hello World! ";
+    echo strlen($str)."&lt;br>";
+    echo strrev($str)."&lt;br>";
+    echo ltrim($str)."&lt;br>";
+    echo rtrim($str)."&lt;br>";
+    echo trim($str)."&lt;br>";
+    echo strtoupper($str)."&lt;br>";
+    echo strtolower($str)."&lt;br>";
+    ?>
+</pre>
+                </div>
+        </div>
+    </div>
+    <div id="str" class="bbtn" style="display: none;">
+        <div class="bbt">
+            <h1>String Operators</h1>
+            <p>
+                There are two string operators. The first is the concatenation operator ('.'), which returns the concatenation of its right and left arguments. The second is the concatenating assignment operator ('.='), which appends the argument on the right side to the argument on the left side. Please read Assignment Operators for more information. 
+            </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="str2.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+
+    &lt;?php
+    $a = "Hello ";
+    $b = $a . "World!"; 
+    echo $b;
+
+    $a = "Hello ";
+    $a .= "World!";  
+    echo $a;
+    ?>
+    
+</pre>
+                </div>
+        </div>
+    </div>
+    <div id="app-list" class="bbtn" style="display: none;">
+        <div class="bbt">
+            <h1>Single Dimensional Array</h1>
+            <p>
+                An array in PHP is actually an ordered map. A map is a type that associates values to keys. This type is optimized for several different uses; it can be treated as an array, list (vector), hash table (an implementation of a map), dictionary, collection, stack, queue, and probably more. As array values can be other arrays, trees and multidimensional arrays are also possible. 
+            </p>
+            <h3>Indexed Array</h3>
+            <p>
+                PHP index is represented by number which starts from 0. We can store number, string and object in the PHP array. All PHP array elements are assigned to an index number by default.
+            </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="arr1.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+    &lt;?php  
+    $cars=array("BMW","FORD","SWIFT","AUDI");
+    echo $cars[0];
+    echo $cars[1];
+    echo $cars[2];
+    echo $cars[3];
+    ?>  
+</pre>
+                </div>
+        </div>
+    </div>
+    <div id="delegation-list" class="bbtn" style="display: none;">
+        <div class="bbt">
+            <h1>Associative Array</h1>
+            <p>
+                PHP allows you to associate name/label with each array elements in PHP using => symbol. Such way, you can easily remember the element because each element is represented by label than an incremented number.
+            </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="arr2.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+    &lt;?php    
+    $age=array("Jahid"=>20,"Harshit"=>19,"Amandeep"=>20);  
+    echo "Jahid age is: ".$age["Jahid"]."&lt;br>";  
+    echo "Harshit age is: ".$age["Harshit"]."&lt;br>";  
+    echo "Amandeep age is: ".$age["Amandeep"]."&lt;br>";  
+    ?>    
+</pre>
+                </div>
+        </div>
+    </div>
+    <div id="pack-list" class="bbtn" style="display: none;">
+        <div class="bbt">
+            <h1>Multidimensional Array</h1>
+            <p>
+                PHP multidimensional array is also known as array of arrays. It allows you to store tabular data in an array. PHP multidimensional array can be represented in the form of matrix which is represented by row * column.
+            </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="arr3.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+    &lt;?php    
+    $age = array  
+    (  
+    array(20,"Jahid"),  
+    array(19,"Harshit"),  
+    array(20,"Amandeep")  
+    );  
+
+    for ($row = 0; $row < 3; $row++) {  
+    for ($col = 0; $col < 2; $col++) {  
+    echo $age[$row][$col]."  ";  
+    }  
+    echo "&lt;br>";  
+    }  
+    ?>    
+</pre>
+                </div>
+        </div>
+    </div>
+
+    <div id="inter-list" class="bbtn" style="display: none;">
+        <div class="bbt">
+            <h1>Super Globals</h1>
+            <p>
+                Several predefined variables in PHP are "superglobals", which means they are available in all scopes throughout a script. There is no need to do global $variable; to access them within functions or methods. 
+            </p>
+    <pre>
+    These superglobal variables are:
+
+    $GLOBALS
+    $_SERVER
+    $_GET
+    $_POST
+    $_FILES
+    $_COOKIE
+    $_SESSION
+    $_REQUEST
+    $_ENV
+
+    </pre>
+    <h3>$GLOBALS</h3>
+    <p>
+        An associative array containing references to all variables which are currently defined in the global scope of the script. The variable names are the keys of the array. 
+    </p>
+    <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+        <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+            <a href="gl1.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+        </div>
+<pre>
+  
+    &lt;?php
+
+    function test()
+    {
+    $foo = "local variable";
+
+    echo '$foo in global scope: ' . $GLOBALS["foo"] . "\n";
+    echo '$foo in current scope: ' . $foo . "\n";
+    }
+
+    $foo = "Example content";
+    test();
+
+    ?>
+
+</pre>
+        </div>
+        <br>
+        <h3>$_SERVER</h3>
+        <p>
+            $_SERVER is a PHP super global variable which holds information about headers, paths, and script locations. 
+        </p>
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+            <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                <a href="gl2.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+            </div>
+    <pre>
+
+    &lt;?php
+    echo $_SERVER['PHP_SELF'];
+    echo "&lt;br>";
+    echo $_SERVER['SERVER_NAME'];
+    echo "&lt;br>";
+    echo $_SERVER['HTTP_HOST'];
+    echo "&lt;br>";
+    echo $_SERVER['HTTP_REFERER'];
+    echo "&lt;br>";
+    echo $_SERVER['HTTP_USER_AGENT'];
+    echo "&lt;br>";
+    echo $_SERVER['SCRIPT_NAME'];
+    ?>
+    </pre>
+            </div>
+        <br>
+        <h3>$_REQUEST</h3>
+        <p>
+            $_REQUEST is a PHP super global variable which contains submitted form data, and all cookie data.
+        </p>
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+            <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                <a href="gl3.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+            </div>
+    <pre>
+
+    &lt;html>
+    &lt;body>
+
+    &lt;form method="post" action="&lt;?php echo $_SERVER['PHP_SELF'];?>">
+    Name: &lt;input type="text" name="fname">
+    &lt;input type="submit">
+    &lt;/form>
+
+    &lt;?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_REQUEST['fname']);
+    if (empty($name)) {
+    echo "Name is empty";
+    } else {
+    echo $name;
+    }
+    }
+    ?>
+
+    &lt;/body>
+    &lt;/html>
+    </pre>
+            </div>
+            <br>
+            <h3>$_GET</h3>
+            <p>
+                $_GET is a super global variable used to collect data from the HTML form after submitting it. When form uses method get to transfer data, the data is visible in the query string, therefore the values are not hidden. $_GET super global array variable stores the values that come in the URL.
+            </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="gl4.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+    &lt;!DOCTYPE html>
+    &lt;html>
+    &lt;body>
+
+    &lt;form method="get" action="&lt;?php echo $_SERVER['PHP_SELF'];?>">
+    &lt;label for="name">Please enter your name: &lt;/label>
+    &lt;input name="name" type="text">&lt;br>
+    &lt;label for="age">Please enter your age: &lt;/label>
+    &lt;input name="age" type="text">&lt;br>
+    &lt;input type="submit" value="Submit">
+    &lt;button type="submit">SUBMIT&lt;/button>
+    &lt;/form>
+    &lt;?php
+    $nm=$_GET['name'];
+    $age=$_GET['age'];
+    echo "&lt;strong>".$nm." is $age years old.&lt;/strong>";
+    ?>
+    &lt;/body>
+    &lt;/html>
+
+</pre>
+                </div>
+                <br>
+            <h3>$_POST</h3>
+            <p>
+                It is a super global variable used to collect data from the HTML form after submitting it. When form uses method post to transfer data, the data is not visible in the query string, because of which security levels are maintained in this method.
+                Below is the HTML and PHP code to explain how $_POST works: 
+            </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="gl5.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+    &lt;!DOCTYPE html>
+    &lt;html>
+    &lt;body>
+
+    &lt;form method="post" action="&lt;?php echo $_SERVER['PHP_SELF'];?>">
+    &lt;label for="name">Please enter your name: &lt;/label>
+    &lt;input name="name" type="text">&lt;br>
+    &lt;label for="age">Please enter your age: &lt;/label>
+    &lt;input name="age" type="text">&lt;br>
+    &lt;input type="submit" value="Submit">
+    &lt;button type="submit">SUBMIT&lt;/button>
+    &lt;/form>
+    &lt;?php
+    $nm=$_POST['name'];
+    $age=$_POST['age'];
+    echo "&lt;strong>".$nm." is $age years old.&lt;/strong>";
+    ?>
+    &lt;/body>
+    &lt;/html>
+
+</pre>
+                </div>
+        </div>
+    </div>
+
+    <div id="data-list" class="bbtn" style="display: none;">
+        <div class="bbt">
+            <h1>PHP DATABASES</h1>
+            <p>
+                MySQL is an open-source relational database management system (RDBMS). It is the most popular database system used with PHP. MySQL is developed, distributed, and supported by Oracle Corporation.  
+    <pre>
+
+    1.The data in a MySQL database are stored in tables which consists of columns and rows.
+    2.MySQL is a database system that runs on a server.
+    3.MySQL is ideal for both small and large applications.
+    4.MySQL is very fast, reliable, and easy to use database system.It uses standard SQL
+    5.MySQL compiles on a number of platforms.
+
+    </pre>
+            </p>
+            <h3>Connection</h3>
+            <p>
+                We can use the MySQLi object-oriented procedure to establish a connection to MySQL database from a PHP script.  
+            </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="data1.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+    &lt;?php
+
+    $conn = new mysqli("localhost", "root", "Jahid@111");
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+    echo "Connected successfully";
+    ?>
+</pre>
+                </div>
+                <br>
+            <h3>Insert Value</h3>
+            <p>
+                Suppose we have to insert a new record into a MySQL database table named student using PHP. The goal is to add the first name, last name, and age of an individual to the table.
+            </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="data2.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+    &lt;?php 
+    $mysqli = new mysqli("localhost", "root", "Jahid@111", "student"); 
+
+    if ($mysqli == = false) { 
+    die("Could not connect. ".$mysqli->connect_error); 
+    } 
+
+    $sql = "insert into student values('Mohd','Jahid',20)"; 
+    if ($mysqli->query($sql) == = true) 
+    { 
+    echo "Records inserted successfully."; 
+    } 
+    else
+    { 
+    echo " Could not able to execute $sql. "
+    .$mysqli->error; 
+    } 
+    $mysqli->close(); 
+    ? > 
+
+</pre>
+                </div>
+                <br>
+            <h3>Delete Value</h3>
+            <p>
+                The delete query is used to delete records from a database table.
+            </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="data3.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+    &lt;?php
+    $link = mysqli_connect("localhost", "root", "Jahid@111", "student"); 
+
+    if($link === false){ 
+    die("Could not connect. " . mysqli_connect_error()); 
+    } 
+
+    $sql = "delete from student where rollno=4208" 
+    if(mysqli_query($link, $sql)){ 
+    echo "Record was deleted successfully."; 
+    } 
+    else{ 
+    echo "Could not able to execute $sql.". mysqli_error($link); 
+    } 
+    mysqli_close($link); 
+    ?> 
+
+</pre>
+                </div>
+            <br>
+            <h3>Update Value</h3>
+            <p>The MySQL UPDATE query is used to update existing records in a table in a MySQL database. </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="data4.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+    &lt;?php
+    $link = mysqli_connect("localhost", "root", "Jahid@111", "student"); 
+
+    if($link === false){ 
+    die("Could not connect. " . mysqli_connect_error()); 
+    } 
+
+    $sql = "update student set name='Jahid' where rollno=4263"; 
+    if(mysqli_query($link, $sql)){ 
+    echo "Record was deleted successfully."; 
+    } 
+    else{ 
+    echo "Could not able to execute $sql.". mysqli_error($link); 
+    } 
+    mysqli_close($link); 
+    ?> 
+
+</pre>
+                </div>
+                <br>
+            <h3>Select values</h3>
+            <p>The select statement is used to select values from the tables.</p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="data5.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+    &lt;?php
+    $link = mysqli_connect("localhost", "root", "Jahid@111", "student"); 
+
+    if($link === false){ 
+    die("Could not connect. " . mysqli_connect_error()); 
+    } 
+
+    $sql = "select rollno,name,age from student;";
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+        echo "Rollno: " . $row["rollno"]. " - Name: " . $row["name"]. " " . $row["age"]. "&lt;br>";
+      }
+    } else {
+      echo "0 results";
+    }
+    $conn->close();
+    ?>
+
+</pre>
+                </div>
+        </div>
+    </div>
+
+    <div id="multi-list" class="bbtn" style="display: none;">
+        <div class="bbt">
+            <h1>Cookie</h1>
+            <p>
+                PHP cookie is a small piece of information which is stored at client browser. It is used to recognize the user.
+
+Cookie is created at server side and saved to client browser. Each time when client sends request to the server, cookie is embedded with request. Such way, cookie can be received at the server side.
+            </p>
+            <h3>setcookie() function</h3>
+            <p>
+                PHP setcookie() function is used to set cookie with HTTP response. Once cookie is set, you can access it by $_COOKIE superglobal variable.
+            </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="coo1.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+    &lt;?php  
+    setcookie("user", "jahid");  
+    ?>  
+    &lt;html>  
+    &lt;body>  
+    &lt;?php  
+    if(!isset($_COOKIE["user"])) {  
+    echo "Sorry, cookie is not found!";  
+    } else {  
+    echo "&lt;br>Cookie Value: " . $_COOKIE["user"];  
+    }  
+    ?>  
+    &lt;/body>  
+    &lt;/html>  
+</pre>
+                </div>
+                <br>
+            <h3>Delete Cookie</h3>
+            <p>
+                If you set the expiration date in past, cookie will be deleted.
+            </p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="coo2.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>
+    &lt;?php  
+    setcookie ("user", "", time() - 3600);
+    ?>  
+</pre>
+                </div>
+        </div>
+    </div>
+
+    <div id="object-list" class="bbtn" style="display: none;">
+       <div class="bbt">
+        <h1>Session</h1>
+        <p>
+            PHP session is used to store and pass information from one page to another temporarily (until user close the website).
+
+PHP session technique is widely used in shopping websites where we need to store and pass cart information e.g. username, product code, product name, product price etc from one page to another.
+
+PHP session creates unique user id for each browser to recognize the user and avoid conflict between multiple browsers.
+        </p>
+        <h3>session_start() function</h3>
+        <p>
+            PHP session_start() function is used to start the session. It starts a new or resumes existing session. It returns existing session if session is created already. If session is not available, it creates and returns new session.
+        </p>
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+            <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                <a href="session1.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+            </div>
+<pre>
+
+    &lt;?php
+    session_start();
+    ?>
+
+    &lt;!DOCTYPE html>
+    &lt;html>
+    &lt;body>
+    
+    &lt;?php
+    $_SESSION["name"] = "Jahid";
+    $_SESSION["class"] = "bca 5th";
+    echo "Session variables are set.";
+    ?>
+    
+    &lt;/body>
+    &lt;/html>
+    
+</pre>
+            </div>
+            <br>
+        <h3>session_destroy()</h3>
+        <p>To destroy the session we use session_destroy() function.</p>
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+            <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                <a href="session2.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+            </div>
+<pre>
+    &lt;?php
+    session_start();
+    ?>
+    &lt;html>
+    &lt;body>
+    
+    &lt;?php
+
+    session_destroy();
+    
+    echo "The session will destroy";
+    ?>
+    
+    &lt;/body>
+    &lt;/html>
+    
+    
+</pre>
+            </div>
+       </div>
+    </div>
+
+    <div id="awt-list" class="bbtn" style="display: none;">
+       <div class="bbt">
+        <h1>File Handling</h1>
+        <p>
+            File handling in PHP is used to you to create, open, read, write, delete, and manipulate files on a server. It is used when you need to store data persistently or handle files uploaded by users. PHP provides several built-in functions to make file handling easy and secure.
+        <pre>
+    Common File Handling Functions in PHP
+
+    fopen() – Opens a file
+    fclose() – Closes a file
+    fread() – Reads data from a file
+    fwrite() – Writes data to a file
+    file_exists() – Checks if a file exists
+    unlink() – Deletes a file
+        </pre>
+        </p>
+        <h3>Opening And Closing Files</h3>
+        <p>
+            Before you can read or write to a file, you need to open it using the fopen() function, which returns a file pointer resource. Once you’re done working with the file, you should close it using fclose() to free up resources.
+        <pre>
+    Files can be opened in any of the following modes:
+
+    1.“w” – Opens a file for writing only. If file does not exist then new file
+    is created and if file already exists then file will be truncated (contents of file is erased).
+    2.“r” – File is open for reading only.
+    3.“a” – File is open for writing only. File pointer points to end of file. 
+    Existing data in file is preserved.
+    4.“w+” – Opens file for reading and writing both. If file not exist then new 
+    file is created and if file already exists then contents of file is erased.
+    5.“r+” – File is open for reading and writing both.
+    6.“a+” – File is open for write/read. File pointer points to end of file. 
+    Existing data in file is preserved. If file is not there then new file is created.
+    7.“x” – New file is created for write only.
+        </pre>
+        </p>
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+            <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                <a href="ff1.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+            </div>
+<pre>  
+    &lt;?php
+
+    $file = fopen("new.txt", "r"); 
+
+    if ($file) {
+    echo "File opened successfully!";
+    fclose($file); 
+    } else {
+    echo "Failed to open the file.";
+    }
+
+    ?>
+
+</pre>
+            </div>
+        <br>
+        <h3>Reading a File</h3>
+        <p>You can read the entire content of a file using the fread() function or the file_get_contents() function.</p>
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+            <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                <a href="ff2.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+            </div>
+<pre>  
+    &lt;?php
+
+    $file = fopen("new.txt", "r");
+    $content = fread($file, filesize("new.txt"));
+    
+    echo $content;
+    fclose($file);
+    
+    ?>
+    
+</pre>
+            </div>
+            <br>
+            <h3>Writing a File</h3>
+            <p>You can write to files using the fwrite() function. It writes data to an open file in the specified mode.</p>
+            <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+                <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                    <a href="ff3.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+                </div>
+<pre>  
+    &lt;?php
+
+    $file = fopen("new.txt", "w");
+    if($file){
+    $text = "Hello world\n";
+    fwrite($file, $text);
+    fclose($file);
+    }
+    ?>
+    
+</pre>
+                </div>
+                <br>
+        <h3>Deleting File</h3>
+        <p>Use the unlink() function to delete the file in PHP.</p>
+        <div style="background-color: #fff; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); overflow: hidden; height: auto; width: 700px; margin-left: 40px;">
+            <div style="background-color: #06fcd3; color: white; padding: 5px; text-align: right; margin-top: none; ">
+                <a href="ff4.html" style="color: white; text-decoration: none; padding: 8px 12px; border-radius: 4px; background-color: #006805; transition: background-color 0.3s;">Click Me</a>
+            </div>
+<pre>  
+    &lt;?php
+
+    if (file_exists("new.txt")) {
+    unlink("new.txt");
+    echo "File deleted successfully!";
+    } else {
+    echo "File does not exist.";
+    }
+
+    ?>
+
+</pre>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <footer>
+            Copyright &copy; 2003-2024 MJ
+        </footer>
+    </div>
+    <script>
+   // Function to filter program links based on search input
+function filterPrograms() {
+    const searchInput = document.querySelector('.input').value.toLowerCase();
+    const programLinks = document.querySelectorAll('.bbt');
+
+    programLinks.forEach(link => {
+        const text = link.textContent.toLowerCase();
+        if (text.includes(searchInput)) {
+            link.style.display = "block"; // Show the link if it matches
+        } else {
+            link.style.display = "none"; // Hide the link if it doesn't match
+        }
+    });
+}
+
+// Add event listener to the search input field
+document.querySelector('.input').addEventListener('input', filterPrograms);
+
+// Function to hide all program lists
+function hideAllProgramLists() {
+    const programLists = document.querySelectorAll('.bbtn');
+    programLists.forEach(list => {
+        list.style.display = "none"; // Hide all program lists
+    });
+}
+
+// Toggle visibility of program lists based on button click
+const toggleButtons = [
+    { id: "2d", listId: "2d-list" },
+    { id: "array", listId: "array1" },
+    { id: "app", listId: "app-list" },
+    { id: "bp", listId: "bpp" },
+    { id: "inp", listId: "inp-list" },
+    { id: "converting", listId: "convert" },
+    { id: "Delegation", listId: "delegation-list" },
+    { id: "exception", listId: "exceptionh" },
+    { id: "func", listId: "funt" },
+    { id: "String", listId: "str" },
+    { id: "inter", listId: "inter-list" },
+    { id: "data", listId: "data-list" },
+    { id: "inheritances", listId: "inherit"},
+    { id: "multi", listId: "multi-list" },
+    { id: "object", listId: "object-list" },
+    { id: "awts", listId: "awt-list" },
+    { id: "pack", listId: "pack-list" }
+];
+
+toggleButtons.forEach(button => {
+    document.getElementById(button.id).addEventListener("click", function() {
+        hideAllProgramLists(); // Hide all program lists
+        const programsList = document.getElementById(button.listId);
+        programsList.style.display = "flex"; // Show the selected program list
+    });
+});
+    </script>
+
+</body>
+</html>

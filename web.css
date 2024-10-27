@@ -1,0 +1,487 @@
+/* Reset margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Apply the font family globally */
+}
+
+/* Header styling */
+.navbar {
+  display: flex; /* Ensure the navbar items are in a row */
+  align-items: center; /* Align navbar items vertically center */
+  justify-content: flex-end;
+  background-color: rgb(3, 0, 0); /* Black background for the navbar */
+  padding: 10px; /* Padding around the navbar */
+  height: 50px;
+
+}
+.header
+{
+  background-color:black;
+}
+.header .ddd
+{
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 50%;
+  border:2px solid #12bcfe;
+  box-shadow: 0px 0px 25px rgb(2, 183, 255);
+  float: left;
+  background-color:black;
+  margin-left: 30px;
+}
+
+.header .ddd:active{
+  max-width: 160px;
+  max-height: 160px;
+  border-radius:50%;
+  border: 6px solid saddlebrown;
+}
+/* From Uiverse.io by biswacpcode */ 
+.navbar a
+{
+  text-decoration: none;
+  color:white;
+
+}
+.navbar .btn {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin-right: 25px;
+}
+
+.navbar .btn::before {
+  margin-left: auto;
+}
+
+.navbar .btn::after, .navbar .btn::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  transition: 0.5s;
+}
+
+.navbar .btn:hover::after, .navbar .btn:hover::before {
+  width: 100%;
+}
+
+
+
+
+
+#j1 {
+  background-image: url('n.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+#j2 {
+  background-image: url('nn.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* Middle section styling */
+.middle {
+    position: relative;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: black;
+    border: 5px solid rgb(80, 88, 71);
+}
+
+.middle img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50px; /* Match the border-radius of the container */
+}
+
+.undermid{
+    position: absolute; 
+    top: 0;
+    right: 5%;
+    bottom: 2%; 
+    border-radius:50px;
+    right: 0%;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 94%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 2.0rem;
+    padding-left: 3%;
+    padding-right: 3%;
+    height: 47%;
+    margin-right: 5%;
+    left:0.2%;
+    text-align:justify;
+    font-family:'Times New Roman', Times, serif;
+    text-shadow: 4px 4px 6px red;
+  }
+  
+  
+  /* When you mouse over the container, fade in the overlay title */
+  .middle:hover .undermid {
+    opacity: 1;
+  }
+ 
+  .undermid2 {
+    position: absolute; 
+    right: 5%;
+    bottom: 2%; 
+    border-radius:50px;
+    right: 0%;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 94%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 2.0rem;
+    padding-left: 3%;
+    padding-right: 3%;
+    height: 42%;
+    margin-right: 5%;
+    left:0.2%;
+    text-align:justify;
+    padding-bottom: 5%;
+    font-family:'Times New Roman', Times, serif;
+    text-shadow: 4px 4px 6px red;
+  }
+  
+  /* When you mouse over the container, fade in the overlay title */
+  .middle:hover .undermid2 {
+    opacity: 1;
+  }
+/* Lower section styling */
+.lower {
+    display: flex;
+    background-color: rgba(90, 90, 90, 0.562);
+    padding: 10px;
+    margin-top: 10px;
+    gap: 20px; /* Add space between the boxes */
+}
+
+.box1, .box2 {
+    background-color: brown;
+    flex: 1; /* Make boxes flexible */
+    margin: 40px;
+    border-radius: 30px;
+    height: 430px;
+    width: 500px;
+    box-shadow: 10px 10px rgb(5, 129, 36);
+    position: relative;
+    overflow: hidden;
+}
+
+.b1{
+    position: absolute; 
+    top: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: 0.5s ease;
+    opacity:0;
+    color: white;
+    font-size: 25px;
+    padding:40px;
+    text-align:justify;
+    font-family:'Times New Roman', Times, serif;
+    text-shadow: 4px 4px 6px rgb(83, 247, 7);
+  }
+  .b2{
+    position: absolute; 
+    top: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 25px;
+    padding:40px;
+    text-align:justify;
+    font-family:'Times New Roman', Times, serif;
+    text-shadow: 4px 4px 6px rgb(18, 214, 240)
+  }
+  .b1 h3{
+    text-align: center;
+  }
+  .b2 h3{
+    text-align: center;
+  }
+  .box1:hover .b1{
+    opacity: 1;
+  }
+  .box2:hover .b2{
+    opacity:1;
+  }
+.box1 img, .box2 img {
+    width: 100%; /* Ensure the image fills the box */
+    height: 100%; /* Ensure the image fills the box */
+    border-radius: 30px;
+     /* Match the border-radius of the container */
+}
+/* Yoinked from CodePen, but improved the animation
+so that it is smooth among other more minor things */
+
+.codepen-button {
+    display: block;
+    cursor: pointer;
+    color: white;
+    margin: 0 auto;
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 3px;
+    isolation: isolate;
+  }
+  
+  .codepen-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    background: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+    background-size: 25% 100%;
+    animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
+    animation-play-state: paused;
+    translate: -5% 0%;
+    text-decoration: none;
+    color:white;
+    transition: translate 0.25s ease-out;
+  }
+  
+  .codepen-button:hover::before {
+    animation-play-state: running;
+    transition-duration: 0.75s;
+    translate: 0% 0%;
+    text-decoration: none;
+  }
+  
+  @keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+    to {
+      transform: translateX(-25%);
+    }
+  }
+  
+  .codepen-button span {
+    position: relative;
+    display: block;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    background: #000;
+    border-radius: 3px;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+  }
+  .codepen1-button {
+    display: block;
+    cursor: pointer;
+    color: white;
+    margin: 0 auto;
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 3px;
+    isolation: isolate;
+  }
+  
+  .codepen1-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    background: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+    background-size: 25% 100%;
+    animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
+    animation-play-state: paused;
+    translate: -5% 0%;
+    text-decoration: none;
+    color:white;
+    transition: translate 0.25s ease-out;
+  }
+  
+  .codepen1-button:hover::before {
+    animation-play-state: running;
+    transition-duration: 0.75s;
+    translate: 0% 0%;
+    text-decoration: none;
+  }
+  
+  @keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+    to {
+      transform: translateX(-25%);
+    }
+  }
+  
+  .codepen1-button span {
+    position: relative;
+    display: block;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    background: #000;
+    border-radius: 3px;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+  }
+/* Footer styling */
+.foot {
+    background-color: black;
+    color: white;
+    font-size: larger;
+    text-align: center;
+    padding: 10px 0; /* Add padding for spacing */
+}
+.card-container {
+  display: flex;
+  flex: 1;
+  margin: 40px auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px; /* Space between the cards */
+  width: 100%;
+  max-width: 1200px; /* Maximum width for the container */
+  z-index: 1;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.card {
+  position: relative;
+  width: 400%; /* Adjusted width for two cards side by side */
+  max-width: 400px;
+  background-color: #2c2c2c;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease-in-out;
+  margin-right: 2%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: -1;
+  background: linear-gradient(45deg, #ff0080, #00ffea, #ff0080, #00ffea);
+  background-size: 400% 400%;
+  border-radius: 15px;
+  filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.8);
+}
+
+.card:hover::before {
+  opacity: 1;
+  animation: glowing 8s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.card-image {
+  background: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.card-content {
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0;
+}
+.card-content:hover
+{
+  opacity: 1;
+}
+
+.card-content h3 {
+  font-size: 2.0em;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 7px;
+
+}
+
+.card-content p {
+
+  font-size: 1.9em;
+  text-align: justify;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 4px;
+  text-shadow: #2c2c2c;
+
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+
+    .card-container {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+       display: flex;
+       justify-content: space-around;
+    }
+
+    .card {
+        margin: 0; /* Remove margin for stacked boxes */
+        width: 100%; /* Make boxes full width */
+    }
+}
+

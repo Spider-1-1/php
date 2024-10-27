@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+&lt;html>
+&lt;body>
+
+&lt;form method="post" action="&lt;?php echo $_SERVER['PHP_SELF'];?>">
+Name: &lt;input type="text" name="fname">
+&lt;input type="submit">
+&lt;/form>
+
+&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$name = htmlspecialchars($_REQUEST['fname']);
+if (empty($name)) {
+echo "Name is empty";
+} else {
+echo $name;
+}
+}
+?>
+
+&lt;/body>
+&lt;/html>
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+Name: <input type="text" name="fname">
+<input type="submit">
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

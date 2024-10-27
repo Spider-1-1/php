@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+    &lt;?php
+    $link = mysqli_connect("localhost", "root", "Jahid@111", "student"); 
+
+    if($link === false){ 
+    die("Could not connect. " . mysqli_connect_error()); 
+    } 
+
+    $sql = "update student set name='Jahid' where rollno=4263"; 
+    if(mysqli_query($link, $sql)){ 
+    echo "Record was deleted successfully."; 
+    } 
+    else{ 
+    echo "Could not able to execute $sql.". mysqli_error($link); 
+    } 
+    mysqli_close($link); 
+    ?> 
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+Record was deleted successfully
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>

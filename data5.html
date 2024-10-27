@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="program.css">
+</head>
+<body>
+    <div class="n">
+    <a href="option.html"><&nbsp; &nbsp;Back</a>
+    </div>
+    <div class="split">
+        
+        <div class="st1">
+            <h2>INPUT</h2>
+<pre>
+    &lt;?php
+    $link = mysqli_connect("localhost", "root", "Jahid@111", "student"); 
+
+    if($link === false){ 
+    die("Could not connect. " . mysqli_connect_error()); 
+    } 
+
+    $sql = "select rollno,name,age from student;";
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+        echo "Rollno: " . $row["rollno"]. "  Name: " . $row["name"]. " 
+        Age:" . $row["age"]. "&lt;br>";
+      }
+    } else {
+      echo "0 results";
+    }
+    $conn->close();
+    ?>
+
+</pre>
+        
+           
+        </div>
+        <div class="st2">
+            <h2>OUTPUT</h2>
+<pre>
+Rollno: 4263 Name: Jahid Age: 20
+Rollno: 4247 Name: Amandeep Age: 20
+Rollno: 4210 Name: Pankaj Age: 19
+Rollno: 4264 Name: Harshit Age: 19
+</pre>
+        </div>
+    </div>
+
+</body>
+</html>
